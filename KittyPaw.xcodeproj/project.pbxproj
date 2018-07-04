@@ -17,6 +17,11 @@
 		D60DF7A920EA1E0000379BB4 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60DF7A820EA1E0000379BB4 /* InterfaceController.swift */; };
 		D60DF7AB20EA1E0000379BB4 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60DF7AA20EA1E0000379BB4 /* ExtensionDelegate.swift */; };
 		D60DF7AD20EA1E0000379BB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60DF7AC20EA1E0000379BB4 /* Assets.xcassets */; };
+		D62BDBB020EBC29E00BEEA5E /* PetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62BDBAF20EBC29E00BEEA5E /* PetModel.swift */; };
+		D62BDBB220EBC33000BEEA5E /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62BDBB120EBC33000BEEA5E /* MessageModel.swift */; };
+		D62BDBB420EBC35B00BEEA5E /* LogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62BDBB320EBC35B00BEEA5E /* LogModel.swift */; };
+		D62BDBB620EBC37D00BEEA5E /* TreatmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62BDBB520EBC37D00BEEA5E /* TreatmentModel.swift */; };
+		D62BDBB820EBC3AA00BEEA5E /* VeterinaryHospitalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62BDBB720EBC3AA00BEEA5E /* VeterinaryHospitalModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +81,11 @@
 		D60DF7AA20EA1E0000379BB4 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		D60DF7AC20EA1E0000379BB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D60DF7AE20EA1E0000379BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D62BDBAF20EBC29E00BEEA5E /* PetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetModel.swift; sourceTree = "<group>"; };
+		D62BDBB120EBC33000BEEA5E /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		D62BDBB320EBC35B00BEEA5E /* LogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModel.swift; sourceTree = "<group>"; };
+		D62BDBB520EBC37D00BEEA5E /* TreatmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentModel.swift; sourceTree = "<group>"; };
+		D62BDBB720EBC3AA00BEEA5E /* VeterinaryHospitalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeterinaryHospitalModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +133,7 @@
 				D60DF78E20EA1DFF00379BB4 /* LaunchScreen.storyboard */,
 				D60DF79120EA1DFF00379BB4 /* Info.plist */,
 				D60DF78520EA1DFE00379BB4 /* AppDelegate.swift */,
+				D6654AEB20ED1333003150A7 /* Model */,
 			);
 			path = KittyPaw;
 			sourceTree = "<group>";
@@ -146,6 +157,18 @@
 				D60DF7A820EA1E0000379BB4 /* InterfaceController.swift */,
 			);
 			path = "KittyPaw WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D6654AEB20ED1333003150A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D62BDBAF20EBC29E00BEEA5E /* PetModel.swift */,
+				D62BDBB120EBC33000BEEA5E /* MessageModel.swift */,
+				D62BDBB320EBC35B00BEEA5E /* LogModel.swift */,
+				D62BDBB520EBC37D00BEEA5E /* TreatmentModel.swift */,
+				D62BDBB720EBC3AA00BEEA5E /* VeterinaryHospitalModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D62BDBB420EBC35B00BEEA5E /* LogModel.swift in Sources */,
 				D60DF78620EA1DFE00379BB4 /* AppDelegate.swift in Sources */,
+				D62BDBB620EBC37D00BEEA5E /* TreatmentModel.swift in Sources */,
+				D62BDBB220EBC33000BEEA5E /* MessageModel.swift in Sources */,
+				D62BDBB820EBC3AA00BEEA5E /* VeterinaryHospitalModel.swift in Sources */,
+				D62BDBB020EBC29E00BEEA5E /* PetModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
