@@ -1,6 +1,6 @@
 import Foundation
 
-struct TreatmentModel {
+struct TreatmentModel: Hashable {
     enum TreatmentType: String {
         case checkUp
         case vaccination
@@ -18,4 +18,12 @@ struct TreatmentModel {
     
     let pet: PetModel
     let veterinaryHospital: VeterinaryHospitalModel
+    
+    var hashValue: Int {
+        return treatmentType.hashValue ^ name.hashValue ^ dateCreated.hashValue ^ uuid.hashValue ^ pet.hashValue ^ veterinaryHospital.hashValue
+    }
+    
+    static func == (lhs: TreatmentModel, rhs: TreatmentModel) -> Bool {
+        return lhs.uuid == rhs.uuid
+    }
 }

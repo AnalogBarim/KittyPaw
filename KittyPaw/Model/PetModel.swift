@@ -1,6 +1,6 @@
 import Foundation
 
-struct PetModel {
+struct PetModel: Hashable {
     enum Species {
         enum CatBreed: String {
             // https://en.wikipedia.org/wiki/List_of_cat_breeds ; https://en.wikipedia.org/wiki/Cat_Fanciers%27_Association
@@ -42,4 +42,12 @@ struct PetModel {
     let messages: Set<MessageModel>?
     let logs: Set<LogModel>?
     let treatments: Set<TreatmentModel>?
+    
+    var hashValue: Int {
+        return name.hashValue ^ notify.hashValue ^ dateCreated.hashValue ^ uuid.hashValue
+    }
+    
+    static func == (lhs: PetModel, rhs: PetModel) -> Bool {
+        return lhs.uuid == rhs.uuid
+    }
 }

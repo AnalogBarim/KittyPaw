@@ -1,6 +1,6 @@
 import Foundation
 
-struct LogModel {
+struct LogModel: Hashable {
     enum DataType: String {
         case feed, water, litter, toy
         case weight, sleep, vomit
@@ -17,4 +17,12 @@ struct LogModel {
     let uuid: UUID
     
     let pet: PetModel
+    
+    var hashValue: Int {
+        return dataType.hashValue ^ quantity.hashValue ^ price.hashValue ^ dateCreated.hashValue ^ uuid.hashValue ^ pet.hashValue
+    }
+    
+    static func == (lhs: LogModel, rhs: LogModel) -> Bool {
+        return lhs.uuid == rhs.uuid
+    }
 }
