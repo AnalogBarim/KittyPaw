@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D601938720EF5AA300F3ADA0 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601938620EF5AA300F3ADA0 /* AppSettings.swift */; };
+		D601938920EF5AEA00F3ADA0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601938820EF5AEA00F3ADA0 /* Date+Extensions.swift */; };
+		D601938D20EF5DED00F3ADA0 /* KittyPaw.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D601938B20EF5DED00F3ADA0 /* KittyPaw.xcdatamodeld */; };
+		D601938F20EF5E0F00F3ADA0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601938E20EF5E0F00F3ADA0 /* CoreDataManager.swift */; };
 		D60DF78620EA1DFE00379BB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60DF78520EA1DFE00379BB4 /* AppDelegate.swift */; };
 		D60DF78D20EA1DFF00379BB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60DF78C20EA1DFF00379BB4 /* Assets.xcassets */; };
 		D60DF79020EA1DFF00379BB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D60DF78E20EA1DFF00379BB4 /* LaunchScreen.storyboard */; };
@@ -67,6 +71,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D601938620EF5AA300F3ADA0 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		D601938820EF5AEA00F3ADA0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		D601938C20EF5DED00F3ADA0 /* KittyPaw.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KittyPaw.xcdatamodel; sourceTree = "<group>"; };
+		D601938E20EF5E0F00F3ADA0 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D60DF78220EA1DFE00379BB4 /* KittyPaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KittyPaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60DF78520EA1DFE00379BB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D60DF78C20EA1DFF00379BB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D601938A20EF5DA300F3ADA0 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				D601938B20EF5DED00F3ADA0 /* KittyPaw.xcdatamodeld */,
+				D601938E20EF5E0F00F3ADA0 /* CoreDataManager.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		D60DF77920EA1DFE00379BB4 = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +150,10 @@
 				D60DF78E20EA1DFF00379BB4 /* LaunchScreen.storyboard */,
 				D60DF79120EA1DFF00379BB4 /* Info.plist */,
 				D60DF78520EA1DFE00379BB4 /* AppDelegate.swift */,
+				D601938620EF5AA300F3ADA0 /* AppSettings.swift */,
+				D601938820EF5AEA00F3ADA0 /* Date+Extensions.swift */,
 				D6654AEB20ED1333003150A7 /* Model */,
+				D601938A20EF5DA300F3ADA0 /* Storage */,
 			);
 			path = KittyPaw;
 			sourceTree = "<group>";
@@ -302,11 +322,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D601938D20EF5DED00F3ADA0 /* KittyPaw.xcdatamodeld in Sources */,
 				D62BDBB420EBC35B00BEEA5E /* LogModel.swift in Sources */,
+				D601938920EF5AEA00F3ADA0 /* Date+Extensions.swift in Sources */,
 				D60DF78620EA1DFE00379BB4 /* AppDelegate.swift in Sources */,
+				D601938720EF5AA300F3ADA0 /* AppSettings.swift in Sources */,
 				D62BDBB620EBC37D00BEEA5E /* TreatmentModel.swift in Sources */,
 				D62BDBB220EBC33000BEEA5E /* MessageModel.swift in Sources */,
 				D62BDBB820EBC3AA00BEEA5E /* VeterinaryHospitalModel.swift in Sources */,
+				D601938F20EF5E0F00F3ADA0 /* CoreDataManager.swift in Sources */,
 				D62BDBB020EBC29E00BEEA5E /* PetModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,6 +651,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D601938B20EF5DED00F3ADA0 /* KittyPaw.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D601938C20EF5DED00F3ADA0 /* KittyPaw.xcdatamodel */,
+			);
+			currentVersion = D601938C20EF5DED00F3ADA0 /* KittyPaw.xcdatamodel */;
+			path = KittyPaw.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D60DF77A20EA1DFE00379BB4 /* Project object */;
 }
