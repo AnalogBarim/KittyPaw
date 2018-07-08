@@ -27,6 +27,7 @@
 		D62BDBB420EBC35B00BEEA5E /* LogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62BDBB320EBC35B00BEEA5E /* LogModel.swift */; };
 		D62BDBB620EBC37D00BEEA5E /* TreatmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62BDBB520EBC37D00BEEA5E /* TreatmentModel.swift */; };
 		D62BDBB820EBC3AA00BEEA5E /* VeterinaryHospitalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62BDBB720EBC3AA00BEEA5E /* VeterinaryHospitalModel.swift */; };
+		D69738F820F22BB8003207EE /* PetStorage(CoreData).swift in Sources */ = {isa = PBXBuildFile; fileRef = D69738F720F22BB8003207EE /* PetStorage(CoreData).swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		D62BDBB320EBC35B00BEEA5E /* LogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModel.swift; sourceTree = "<group>"; };
 		D62BDBB520EBC37D00BEEA5E /* TreatmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentModel.swift; sourceTree = "<group>"; };
 		D62BDBB720EBC3AA00BEEA5E /* VeterinaryHospitalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeterinaryHospitalModel.swift; sourceTree = "<group>"; };
+		D69738F720F22BB8003207EE /* PetStorage(CoreData).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PetStorage(CoreData).swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +121,7 @@
 		D601938A20EF5DA300F3ADA0 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				D601938B20EF5DED00F3ADA0 /* KittyPaw.xcdatamodeld */,
-				D601938E20EF5E0F00F3ADA0 /* CoreDataManager.swift */,
+				D69738F620F22B6C003207EE /* CoreData */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -192,6 +193,16 @@
 				D62BDBB720EBC3AA00BEEA5E /* VeterinaryHospitalModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D69738F620F22B6C003207EE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D601938B20EF5DED00F3ADA0 /* KittyPaw.xcdatamodeld */,
+				D601938E20EF5E0F00F3ADA0 /* CoreDataManager.swift */,
+				D69738F720F22BB8003207EE /* PetStorage(CoreData).swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +347,7 @@
 				D601938F20EF5E0F00F3ADA0 /* CoreDataManager.swift in Sources */,
 				D62BDBB020EBC29E00BEEA5E /* PetModel.swift in Sources */,
 				D60D488920F1079A0048FDD1 /* UIView+Extensions.swift in Sources */,
+				D69738F820F22BB8003207EE /* PetStorage(CoreData).swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

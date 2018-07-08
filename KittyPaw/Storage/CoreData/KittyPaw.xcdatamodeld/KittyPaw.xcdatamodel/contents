@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="LogEntity" representedClassName="LogEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="dataType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="metadata" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="pet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PetEntity" inverseName="logs" inverseEntity="PetEntity" syncable="YES"/>
+    </entity>
+    <entity name="MessageEntity" representedClassName="MessageEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateRead" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="fromButler" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="pet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PetEntity" inverseName="messages" inverseEntity="PetEntity" syncable="YES"/>
+    </entity>
+    <entity name="PetEntity" representedClassName="PetEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="breed" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateOfBirth" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="farewell" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="firstEncounter" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notify" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="profileImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="species" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="logs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LogEntity" inverseName="pet" inverseEntity="LogEntity" syncable="YES"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MessageEntity" inverseName="pet" inverseEntity="MessageEntity" syncable="YES"/>
+        <relationship name="treatments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TreatmentEntity" inverseName="pet" inverseEntity="TreatmentEntity" syncable="YES"/>
+    </entity>
+    <entity name="TreatmentEntity" representedClassName="TreatmentEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dueDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="treatmentType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="pet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PetEntity" inverseName="treatments" inverseEntity="PetEntity" syncable="YES"/>
+        <relationship name="veterinaryHospital" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VeterinaryHospitalEntity" inverseName="treatments" inverseEntity="VeterinaryHospitalEntity" syncable="YES"/>
+    </entity>
+    <entity name="VeterinaryHospitalEntity" representedClassName="VeterinaryHospitalEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="treatments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TreatmentEntity" inverseName="veterinaryHospital" inverseEntity="TreatmentEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="PetEntity" positionX="-182" positionY="-175" width="128" height="298"/>
+        <element name="MessageEntity" positionX="-362" positionY="65" width="128" height="133"/>
+        <element name="LogEntity" positionX="-362" positionY="-135" width="128" height="178"/>
+        <element name="TreatmentEntity" positionX="16" positionY="-144" width="128" height="178"/>
+        <element name="VeterinaryHospitalEntity" positionX="205" positionY="-144" width="128" height="148"/>
+    </elements>
+</model>
